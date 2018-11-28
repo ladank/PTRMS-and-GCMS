@@ -9,10 +9,10 @@ def merge_sheet(rawdata):
     filename = os.path.join(folder_dir,rawdata)
     print(filename,'\n')
     concentration = pd.read_excel(filename,\
-    sheet_name = 3)
+    sheet_name = 'Concentration')
     print(concentration)
     time = pd.read_excel(filename,\
-    sheet_name = 1,usecols = 'B:C')
+    sheet_name = 'Time   Cycle',usecols = 'B:C')
     print(time)
     result = time.join(concentration)
     print(result)
